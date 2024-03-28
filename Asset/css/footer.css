@@ -1,0 +1,46 @@
+.footerDiv {
+    width: 100%;
+    height: 500px;
+    background: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+}
+.footerLogoPanel{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+.footerLogoImg > img {
+    max-height: 40px;
+    max-width:  50px;
+}
+
+.footerLogoPanel > h1{
+    font-size: var(--h1fontsize);
+}
+
+.footerLogoPanel > h1 > span {
+    color: var(--btncolor);
+}
+
+.footerDiv > p {
+    max-width: 901px;
+    text-align: center;
+    line-height: 2rem;
+    color: var(--txtcolor);
+}
+
+.footerSocialMediaIcons > .fa {
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    margin-right: 20px;
+}
+
+.footerDiv > hr {
+    width: 75%;
+}

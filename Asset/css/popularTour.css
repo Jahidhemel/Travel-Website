@@ -1,0 +1,55 @@
+.popularTourDiv {
+    display: flex;
+    gap: 60px;
+    max-height: 550px;
+    
+    
+   
+}
+
+.popularTourdetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.popularTourdetails > h1 {
+    font-size: var(--titlefontsize);
+}
+
+.popularTourpara{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--txtcolor );
+    font-weight: 500;
+    line-height: 1.5rem;;
+}
+
+.popularTourpara > ul {
+    padding: 10px 50px;
+
+}
+
+.popularTourpara > ul > li > a{
+    text-decoration: none;
+    color: var(--txtcolor);
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+}
+
+.popularTourdetails > a > button{
+    background: var(--btncolor);
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 15px 30px;
+    border: none;
+    font-size: 1.3rem;
+    min-height: 50px;
+    min-width: 200px;
+}
+
+.popularTourImage > img {
+    max-height: 550px;
+}

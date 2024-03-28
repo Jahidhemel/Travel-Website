@@ -1,0 +1,57 @@
+.headerPaneldiv{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.headerlogoPanel {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.headerlogo > img {
+    max-height: 40px;
+    max-width:  50px;
+}
+
+.headerlogoPanel > h1 {
+    font-size: var(--h1fontsize);
+
+}
+.headerlogoPanel > h1 > span {
+    color: var(--btncolor);
+}
+
+.headernavPanel {
+    display: flex;
+}
+
+.headernavPanel > ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.headernavPanel > ul > li{
+    list-style: none;
+}
+
+.headernavPanel > ul > li > a {
+    text-decoration: none;
+    color: var( --txtcolor);
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    font-size: 1.5rem;
+}
+
+.headernavPanel > ul > li:active a {
+    color: var(--btncolor);
+}
+
+.headernavPanel > ul > li:hover a {
+    color: var(--btncolor);
+}
+
+
+
+

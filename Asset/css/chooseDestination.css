@@ -1,0 +1,65 @@
+
+.chooseDestinationBody {
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.choosedestinationImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 350px;
+    border-radius: 20px;
+}
+
+.choosedestinationImg > h2 {
+    font-size: var(--h2fontsize);
+    letter-spacing: 1px;
+}
+
+.choosedestinationImg1 {
+    width: calc(50% - 10px);
+    background: url(../Images/Rectangle\ 5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.choosedestinationImg2 {
+    width: calc(50% - 10px);
+    background: url(../Images/Rectangle\ 8.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.choosedestinationImg3 {
+    width: calc(30% - 10px);
+    background: url(../Images/Rectangle\ 6.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.choosedestinationImg4 {
+    width: calc(45% - 10px);
+    background: url(../Images/Rectangle\ 7.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.choosedestinationImg5 {
+    width: calc(25% - 20px);
+    background: url(../Images/Rectangle\ 9.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.choosedestinationImg6 {
+    width: calc(40% - 10px);
+    background: url(../Images/Rectangle\ 11.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.choosedestinationImg7 {
+    width: calc(60% - 10px);
+    background: url(../Images/Rectangle\ 10.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+

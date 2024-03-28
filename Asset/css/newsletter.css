@@ -1,0 +1,84 @@
+.newsletterDiv {
+    display:flex;
+    gap: 30px;
+}
+
+.newsletterFromDIV{
+    min-width: 40%;
+    display: grid;
+    gap: 30px;
+    border: 1px solid var( --btncolor);
+    border-radius: 20px;
+    padding: 50px;
+}
+
+.newsletterFromDIV > h2{
+    font-size: var( --h1fontsize);
+}
+
+.newsletterFromDIV > p {
+    max-width: 410px;
+    color: var(--txtcolor);
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+}
+.newsletterFromDIV > form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.newsletterFromDIV > form > input{
+    width: 100%;
+    padding-left: 20px;
+    min-height: 60px;
+    border-radius: 10px;
+    border: none;
+    background: #f3f3f3;
+}
+
+.newsletterFromDIV > form > a > button {
+    width: 100%;
+    min-height: 60px;
+    border-radius: 10px;
+    border: none;
+    background: var(--btncolor);
+    color: white;
+    font-size: var(--h3fontsize);
+    
+}
+
+.newsletterImgDiv {
+    min-width: calc(60% - 30px);
+    min-height: 100%;
+    background: url(../Images/Rectangle\ 8\ \(1\).png);
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.newsletterImgDiv > .newsletterImgContent {
+    height: 170px;
+    width: 400px;
+    border-radius: 20px;
+    background: var(--btncolor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transform: rotate(-20deg);
+    margin-bottom: 75px;
+    margin-right: 20px;
+    gap: 10px;
+    
+}
+.newsletterImgContent > p {
+    font-size: 2rem;
+}
+.newsletterImgContent > h1 {
+    font-size: var(--h1fontsize);
+}

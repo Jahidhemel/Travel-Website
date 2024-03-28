@@ -1,0 +1,99 @@
+.dealsandDiscountBodyPanel {
+    display: grid;
+    gap: 30px;
+    min-height: 450px;
+    justify-items: center;
+}
+
+.dealsandDiscountBodyCommonPanel{
+    min-height: 550px;
+    border-radius: 20px;
+    padding: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.TourToSantoriniPanel1, .TourToSantoriniPanel3{
+    background: url(../Images/Group\ 39.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.TourToSantoriniPanel2{
+    background: url(../Images/Group\ 40.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dealsandDiscountContentDiv{
+    width: 55%;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.dealsandDiscountContentTop{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.DDtopCmnSection{
+    display: flex;
+    gap: 10px;
+}
+
+.DDcmnLogoIcon > .fa {
+    color: var(--btncolor);
+    font-size: 1.8rem;
+}
+
+.DDtopCmnSection > p {
+    color: var(--txtcolor);
+    font-weight: 600;
+}
+
+.dealsandDiscountContentDiv > h2{
+    font-size: var(--h2fontsize);
+    
+}
+
+.dealsandDiscountContentDiv > p {
+    color: var(--txtcolor);
+}
+
+.dealsandDiscountContentDiv > .DDprice > h3{
+    font-size: var(--h3fontsize);
+    color: var(--btncolor);
+}
+
+.dealsandDiscountContentDiv > a > button {
+    border: none;
+    background: var(--btncolor);
+    color: white;
+    font-weight: 600;
+    padding: 20px 50px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+}
+
+.TourToSantoriniPanel2 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.dealsandDiscountBodyPanel > a > button{
+    background: var(--btncolor);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 20px 30px;
+}

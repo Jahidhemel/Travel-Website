@@ -1,0 +1,90 @@
+.bannerPanelDiv {
+    min-height: 550px;
+    background-image: linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0) ) , url(../Images/Group\ 13\ \(1\)\ \(1\).png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    color: white;
+    text-align: center;
+    
+}
+
+.bannerPanelDiv > h1 {
+    font-size: var(--bannerfontsize);
+    letter-spacing: 0.01rem;
+}
+
+.bannerPanelDiv > p{
+    max-width: 570px;
+    letter-spacing: 0.01rem;
+    line-height: 1.4rem;
+}
+
+.tourSearchPanel {
+    display: flex;
+    gap: 25px;
+    padding: 15px;
+    background: linear-gradient( rgba(255,255,255,0.4), rgba(255,255,255,0.4) );
+    border-radius: 5px;
+}
+
+.tourSearchPanel input {
+    height: 50px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    min-width: 200px;
+}
+
+#when {
+    
+    padding-left: 60px;
+    
+}
+
+.whenPanel {
+    position: relative;
+}
+
+.whenPanel > small {
+    position: absolute;
+    color: #818080;
+    top: 15px;
+    left: 10px;
+}
+
+#SelectType {
+    min-width: 200px;
+    border-radius: 5px;
+    border: none; 
+    padding: 10px;
+    color: #818080;
+}
+
+.tourSearchPanel > a > button {
+    height: 50px;
+    min-width: 200px;
+    border: none;
+    border-radius: 10px;
+    background: var(--btncolor);
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.tourSearchPanel > a > button > .fa {
+margin-right: 5px;
+}
+
+
+input[type=date]:required:invalid::-webkit-datetime-edit {
+    color: transparent;
+}
+input[type=date]:focus::-webkit-datetime-edit {
+    color: black !important;
+}
