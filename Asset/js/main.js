@@ -142,8 +142,8 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             e.stopPropagation();
             showModal(
-                'Demo project',
-                "This page is part of Hemel's portfolio — booking and other actions aren't wired to a backend. To get in touch, send an email."
+                'Just a demo!',
+                "Hey! This is a demo from my portfolio, so the buttons don't actually do anything yet. Drop me an email if you'd like to chat."
             );
         });
     });
