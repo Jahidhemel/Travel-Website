@@ -1,21 +1,34 @@
 /* =========================================================
    Hero Travel — Responsive Stylesheet
+   Loaded LAST — overrides earlier section CSS files.
    Breakpoints: 1024px (tablet) and 600px (mobile)
    ========================================================= */
 
-/* ---------- Shared ---------- */
-.pagewidth {
-    width: 92%;
-    margin: 50px auto;
+/* ---------- Global resets / safety ---------- */
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
-img {
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+img, iframe, video {
     max-width: 100%;
     height: auto;
 }
 
-iframe {
-    max-width: 100%;
+.pagewidth {
+    width: 92%;
+    margin: 60px auto;
+}
+
+section,
+.popularTourDiv,
+.simplePlaceDiv,
+.dealsandDiscountBodyCommonPanel {
+    max-height: none !important;
 }
 
 
@@ -25,14 +38,18 @@ iframe {
 @media (max-width: 1024px) {
 
     :root {
-        --bannerfontsize: 3.8rem;
+        --bannerfontsize: 4rem;
         --h1fontsize: 2rem;
-        --h2fontsize: 1.8rem;
+        --h2fontsize: 1.7rem;
         --titlefontsize: 2.4rem;
-        --h3fontsize: 1.5rem;
+        --h3fontsize: 1.4rem;
     }
 
-    /* Header */
+    .pagewidth {
+        margin: 50px auto;
+    }
+
+    /* ---------- Header ---------- */
     .headerPaneldiv {
         flex-wrap: wrap;
         gap: 20px;
@@ -40,85 +57,145 @@ iframe {
     }
 
     .headernavPanel > ul {
-        gap: 20px;
+        gap: 22px;
         flex-wrap: wrap;
         justify-content: center;
     }
 
     .headernavPanel > ul > li > a {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
     }
 
-    /* Hero search panel */
+    /* ---------- Banner ---------- */
+    .bannerPanelDiv {
+        min-height: 480px !important;
+        padding: 30px 20px;
+    }
+
     .tourSearchPanel {
         flex-wrap: wrap;
-        gap: 15px;
+        gap: 12px;
+        justify-content: center;
     }
 
     .tourSearchPanel input,
     .tourSearchPanel select,
-    .tourSearchPanel button {
-        flex: 1 1 200px;
+    .tourSearchPanel > a > button {
+        flex: 1 1 220px;
+        min-width: 0 !important;
+        width: 100%;
     }
 
-    /* Popular tours section: stack image and text */
+    /* ---------- Popular Tours: stack image + text ---------- */
     .popularTourDiv {
-        grid-template-columns: 1fr !important;
-        display: flex !important;
-        flex-direction: column;
+        flex-direction: column !important;
+        max-height: none !important;
         gap: 30px;
     }
 
-    .popularTourImage img {
+    .popularTourImage,
+    .popularTourImage > img {
         width: 100%;
+        max-height: none !important;
+        height: auto;
         border-radius: 12px;
     }
 
-    /* Choose destination grid */
+    /* ---------- Choose Destination: clean 2x grid ---------- */
     .chooseDestinationBody {
-        grid-template-columns: repeat(2, 1fr) !important;
         display: grid !important;
-        gap: 20px;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px;
     }
 
-    /* Why choose us */
+    .choosedestinationImg,
+    .choosedestinationImg1,
+    .choosedestinationImg2,
+    .choosedestinationImg3,
+    .choosedestinationImg4,
+    .choosedestinationImg5,
+    .choosedestinationImg6,
+    .choosedestinationImg7 {
+        width: 100% !important;
+        height: 240px;
+    }
+
+    /* ---------- Why Choose Us: stack 1 column ---------- */
     .whyChooseUsBodyPanel {
-        grid-template-columns: 1fr !important;
-        display: grid !important;
-        gap: 25px;
+        flex-direction: column !important;
+        align-items: stretch !important;
     }
 
-    /* Deals & discounts */
+    .WCUBodyCOntentAll {
+        width: 100% !important;
+    }
+
+    /* ---------- Deals & Discounts ---------- */
     .dealsandDiscountBodyPanel {
-        grid-template-columns: repeat(2, 1fr) !important;
         display: grid !important;
+        grid-template-columns: 1fr !important;
         gap: 25px;
     }
 
-    /* Simple Place section */
+    .dealsandDiscountBodyCommonPanel {
+        min-height: 400px !important;
+        padding: 30px !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .TourToSantoriniPanel2 {
+        justify-content: center !important;
+    }
+
+    .dealsandDiscountContentDiv {
+        width: 80% !important;
+        padding: 30px !important;
+    }
+
+    /* ---------- Simple Place: stack ---------- */
     .simplePlaceDiv {
         grid-template-columns: 1fr !important;
-        display: flex !important;
-        flex-direction: column;
         gap: 30px;
+        min-height: 0 !important;
     }
 
     .simplePlaceVideoDiv {
-        height: 280px;
+        height: 320px;
+        min-width: 100% !important;
     }
 
-    /* Newsletter */
+    .simplePlaceVideoDiv > iframe {
+        height: 100% !important;
+    }
+
+    /* ---------- Newsletter ---------- */
     .newsletterDiv {
-        grid-template-columns: 1fr !important;
-        display: flex !important;
-        flex-direction: column;
+        flex-direction: column !important;
         gap: 25px;
     }
 
-    .newsletterFromDIV form {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
+    .newsletterFromDIV {
+        min-width: 100% !important;
+        padding: 30px !important;
+    }
+
+    .newsletterImgDiv {
+        min-width: 100% !important;
+        min-height: 280px;
+        justify-content: flex-end !important;
+    }
+
+    .newsletterImgContent {
+        margin-bottom: 30px !important;
+        margin-right: 20px !important;
+    }
+
+    /* ---------- Footer ---------- */
+    .footerDiv {
+        height: auto !important;
+        padding: 40px 20px !important;
+        gap: 20px;
     }
 }
 
@@ -129,11 +206,11 @@ iframe {
 @media (max-width: 600px) {
 
     :root {
-        --bannerfontsize: 2.5rem;
-        --h1fontsize: 1.6rem;
-        --h2fontsize: 1.4rem;
-        --titlefontsize: 1.9rem;
-        --h3fontsize: 1.2rem;
+        --bannerfontsize: 2.4rem;
+        --h1fontsize: 1.5rem;
+        --h2fontsize: 1.3rem;
+        --titlefontsize: 1.8rem;
+        --h3fontsize: 1.1rem;
     }
 
     p, li {
@@ -146,139 +223,296 @@ iframe {
         margin: 35px auto;
     }
 
-    /* Header — stack nav under logo */
+    /* ---------- Header — stack nav under logo ---------- */
     .headerPaneldiv {
         flex-direction: column;
         gap: 15px;
+        text-align: center;
+    }
+
+    .headerlogoPanel {
+        justify-content: center;
     }
 
     .headernavPanel > ul {
-        gap: 12px 18px;
-        font-size: 1rem;
+        gap: 10px 18px;
     }
 
     .headernavPanel > ul > li > a {
         font-size: 1rem;
     }
 
-    /* Hero banner */
-    .bannerSection h1 {
-        font-size: var(--bannerfontsize);
-        text-align: center;
+    /* ---------- Banner ---------- */
+    .bannerPanelDiv {
+        min-height: 420px !important;
+        gap: 20px;
+        padding: 20px 15px;
+    }
+
+    .bannerPanelDiv > h1 {
+        font-size: var(--bannerfontsize) !important;
         line-height: 1.1;
     }
 
-    .bannerSection p {
-        text-align: center;
+    .bannerPanelDiv > p {
+        font-size: 1rem;
+        line-height: 1.4rem;
     }
 
     .tourSearchPanel {
-        flex-direction: column;
+        flex-direction: column !important;
+        width: 100%;
         gap: 10px;
-        padding: 15px;
+        padding: 12px;
     }
 
     .tourSearchPanel input,
     .tourSearchPanel select,
-    .tourSearchPanel button {
-        width: 100%;
-        flex: 1 1 100%;
-        padding: 12px;
-        font-size: 1rem;
+    .tourSearchPanel > a,
+    .tourSearchPanel > a > button {
+        width: 100% !important;
+        flex: 1 1 100% !important;
+        min-width: 0 !important;
+        height: 46px !important;
+        font-size: 1rem !important;
     }
 
-    .tourSearchPanel a {
+    .whenPanel {
         width: 100%;
     }
 
-    /* Popular tours */
-    .popularTourdetails h1,
-    .generalTitlePanel > h1 {
-        font-size: var(--titlefontsize);
+    #when {
+        width: 100% !important;
+    }
+
+    /* ---------- Popular Tours ---------- */
+    .popularTourdetails > h1 {
+        font-size: var(--titlefontsize) !important;
         text-align: center;
     }
 
-    .popularTourpara p,
-    .popularTourpara li {
-        font-size: 1rem;
+    .popularTourpara > ul {
+        padding: 0 0 0 25px !important;
     }
 
-    /* Destination grid: 1 column on mobile */
+    .popularTourpara > ul > li > a {
+        font-size: 1rem !important;
+        line-height: 1.4rem !important;
+    }
+
+    .popularTourdetails > a {
+        align-self: center;
+    }
+
+    /* ---------- Section titles ---------- */
+    .generalTitlePanel > h1 {
+        font-size: var(--titlefontsize) !important;
+        text-align: center;
+    }
+
+    .generalTitlePanel > p {
+        font-size: 1rem !important;
+        line-height: 1.4rem !important;
+    }
+
+    /* ---------- Choose Destination: 1 column ---------- */
     .chooseDestinationBody {
         grid-template-columns: 1fr !important;
-        gap: 15px;
+        gap: 14px;
     }
 
-    .choosedestinationImg {
-        min-height: 180px;
+    .choosedestinationImg,
+    .choosedestinationImg1,
+    .choosedestinationImg2,
+    .choosedestinationImg3,
+    .choosedestinationImg4,
+    .choosedestinationImg5,
+    .choosedestinationImg6,
+    .choosedestinationImg7 {
+        height: 200px;
     }
 
-    /* Why choose us — center text */
+    .choosedestinationImg > h2 {
+        font-size: 1.4rem !important;
+    }
+
+    /* ---------- Why Choose Us ---------- */
     .WCUBodyCOntentAll {
         text-align: center;
+        padding: 25px 18px !important;
     }
 
     .WCUImg {
         margin: 0 auto;
     }
 
-    /* Deals & discounts: 1 column on mobile */
-    .dealsandDiscountBodyPanel {
-        grid-template-columns: 1fr !important;
-        gap: 20px;
+    .WCUImg > img {
+        max-height: 60px;
+    }
+
+    .WCUContentAll > p {
+        font-size: 1rem !important;
+    }
+
+    /* ---------- Deals & Discounts ---------- */
+    .dealsandDiscountBodyCommonPanel {
+        min-height: 360px !important;
+        padding: 18px !important;
+        background-position: center !important;
+    }
+
+    .dealsandDiscountContentDiv {
+        width: 100% !important;
+        padding: 20px !important;
+        gap: 14px;
     }
 
     .dealsandDiscountContentTop {
-        flex-wrap: wrap;
-        gap: 10px;
+        flex-wrap: wrap !important;
+        gap: 12px !important;
     }
 
     .DDtopCmnSection p {
-        font-size: 0.9rem;
+        font-size: 0.9rem !important;
     }
 
-    /* Simple Place video */
-    .simplePlaceVideoDiv {
-        height: 220px;
+    .DDcmnLogoIcon > .fa {
+        font-size: 1.2rem !important;
     }
 
-    /* Newsletter */
-    .newsletterFromDIV {
+    .dealsandDiscountContentDiv > h2 {
+        font-size: 1.3rem !important;
+    }
+
+    .dealsandDiscountContentDiv > p {
+        font-size: 0.95rem !important;
+    }
+
+    .dealsandDiscountContentDiv > a > button {
+        padding: 12px 24px !important;
+        font-size: 1rem !important;
+    }
+
+    .dealsandDiscountBodyPanel > a > button {
+        font-size: 1.1rem !important;
+        padding: 14px 22px !important;
+    }
+
+    /* ---------- Simple Place ---------- */
+    .simplePlaceContentPanel > h1 {
+        font-size: var(--titlefontsize) !important;
         text-align: center;
+    }
+
+    .simplePlaceContentPanel > p,
+    .simplePlaceContentPanel > ul > li {
+        font-size: 1rem !important;
+        line-height: 1.5rem !important;
+    }
+
+    .simplePlaceContentPanel > a {
+        align-self: center;
+        margin-top: 10px;
+    }
+
+    .simplePlaceContentPanel > a > button {
+        padding: 12px 24px !important;
+        font-size: 1rem !important;
+    }
+
+    .simplePlaceVideoDiv {
+        height: 220px !important;
+    }
+
+    /* ---------- Newsletter ---------- */
+    .newsletterFromDIV {
+        padding: 24px 18px !important;
+        text-align: center;
+        gap: 18px !important;
+    }
+
+    .newsletterFromDIV > form {
+        gap: 14px !important;
+    }
+
+    .newsletterFromDIV > form > input {
+        min-height: 48px !important;
+        font-size: 1rem !important;
+    }
+
+    .newsletterFromDIV > form > a > button {
+        min-height: 48px !important;
+        font-size: 1rem !important;
     }
 
     .newsletterImgDiv {
-        min-height: 180px;
-        text-align: center;
+        min-height: 220px !important;
+        background-position: center !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
 
-    /* Footer */
-    .footerSocialMediaIcons {
-        justify-content: center;
-        flex-wrap: wrap;
+    .newsletterImgContent {
+        height: 130px !important;
+        width: 250px !important;
+        margin: 0 !important;
+        transform: rotate(-12deg) !important;
+    }
+
+    .newsletterImgContent > p {
+        font-size: 1.2rem !important;
+    }
+
+    .newsletterImgContent > h1 {
+        font-size: 1.3rem !important;
+    }
+
+    /* ---------- Footer ---------- */
+    .footerDiv {
+        padding: 30px 18px !important;
+        gap: 18px;
     }
 
     .footertext {
-        font-size: 1rem;
+        font-size: 1rem !important;
+        text-align: center;
+        line-height: 1.6rem !important;
+    }
+
+    .footerSocialMediaIcons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .footerSocialMediaIcons > .fa {
+        font-size: 1.6rem !important;
+        margin: 0 8px !important;
+    }
+
+    .copyRight {
+        font-size: 0.9rem !important;
         text-align: center;
     }
 
-    /* Buttons across the page */
+    /* ---------- General buttons ---------- */
     button {
-        font-size: 1rem;
-        padding: 10px 18px;
+        font-size: 1rem !important;
+        padding: 10px 18px !important;
     }
 }
 
 
 /* =========================================================
-   Tiny phones — up to 380px
+   TINY phones — up to 380px
    ========================================================= */
 @media (max-width: 380px) {
 
     :root {
         --bannerfontsize: 2rem;
-        --titlefontsize: 1.6rem;
+        --titlefontsize: 1.5rem;
+        --h2fontsize: 1.2rem;
     }
 
     .headernavPanel > ul {
@@ -287,5 +521,10 @@ iframe {
 
     .headernavPanel > ul > li > a {
         font-size: 0.9rem;
+    }
+
+    .newsletterImgContent {
+        width: 220px !important;
+        height: 120px !important;
     }
 }
