@@ -215,6 +215,28 @@ section,
     margin: 0 !important;
 }
 
+/* ---------- Popular Tours — gap above Read More button ---------- */
+.popularTourdetails > a {
+    margin-top: 25px !important;
+    display: inline-block;
+}
+
+/* ---------- Simple Place — fix YouTube iframe aspect ratio ---------- */
+.simplePlaceVideoDiv {
+    aspect-ratio: 16 / 9;
+    align-self: center;
+    width: 100%;
+    height: auto !important;
+    min-height: 0 !important;
+}
+
+.simplePlaceVideoDiv > iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 20px;
+    display: block;
+}
+
 
 /* =========================================================
    TABLET — up to 1024px
@@ -333,12 +355,7 @@ section,
     }
 
     .simplePlaceVideoDiv {
-        height: 320px;
         min-width: 100% !important;
-    }
-
-    .simplePlaceVideoDiv > iframe {
-        height: 100% !important;
     }
 
     /* ---------- Newsletter ---------- */
@@ -582,9 +599,7 @@ section,
         font-size: 1rem !important;
     }
 
-    .simplePlaceVideoDiv {
-        height: 220px !important;
-    }
+    /* simplePlaceVideoDiv keeps its 16:9 aspect ratio from the global rule */
 
     /* ---------- Newsletter ---------- */
     .newsletterFromDIV {
