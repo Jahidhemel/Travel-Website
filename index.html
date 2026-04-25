@@ -3,97 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hero Travel</title>
+    <meta name="description" content="Hero Travel — discover handpicked tours, exclusive deals, and unforgettable destinations across the globe.">
+    <title>Hero Travel — Explore the World With Confidence</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="Asset/css/main.css"> 
+    <link rel="stylesheet" href="Asset/css/main.css">
     <link rel="stylesheet" href="Asset/css/header.css">
     <link rel="stylesheet" href="Asset/css/banner.css">
     <link rel="stylesheet" href="Asset/css/popularTour.css">
     <link rel="stylesheet" href="Asset/css/chooseDestination.css">
     <link rel="stylesheet" href="Asset/css/whyChooseUs.css">
-    <link rel="stylesheet" href="Asset/css/dealandDiscount.CSS">
+    <link rel="stylesheet" href="Asset/css/dealandDiscount.css">
     <link rel="stylesheet" href="Asset/css/simplePlace.css">
     <link rel="stylesheet" href="Asset/css/newsletter.css">
     <link rel="stylesheet" href="Asset/css/footer.css">
-
-
-
-
 </head>
 <body>
     <header>
         <div class="headerPaneldiv pagewidth">
             <div class="headerlogoPanel">
                 <div class="headerlogo">
-                    <img src="Asset/Images/Group 40071 (2).png" alt="Logo">
+                    <img src="Asset/Images/Group 40071 (2).png" alt="Hero Travel logo">
                 </div>
                 <h1>Hero <span>Travel</span></h1>
             </div>
             <nav class="headernavPanel">
-                <ul><li><a href="#">Home</a></li>
-                    <li><a href="#">Packages</a></li>
-                    <li><a href="#">Testimonial</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#testimonial">Testimonial</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-
             </nav>
         </div>
-
     </header>
 
-    <section class="bannerSection">
+    <section class="bannerSection" id="home">
         <div class="bannerPanelDiv pagewidth">
             <h1>Explore Your Travel</h1>
-            <p>Lorem ipsum dolor sit amet consectetur elit. Facere earum ut 
-                at molestiae, repellat sit eos eaque officia est.
-            </p>
+            <p>From snow-capped mountains to sun-soaked beaches — find the trip that fits your story. Plan, book, and travel with Hero Travel in just a few clicks.</p>
             <div class="tourSearchPanel">
-                <input id="whereto" type="text" placeholder="Where go">
+                <input id="whereto" type="text" placeholder="Where to?">
                 <div class="whenPanel">
                     <small>When:</small>
-                    <input id="when" type="date" placeholder="When" required >
+                    <input id="when" type="date" placeholder="When" required>
                 </div>
-                
                 <select name="Tourtype" id="SelectType">
                     <option value="#">Select Type</option>
                     <option value="1">Solo Tour</option>
-                    <option value="2">Couple tour</option>
+                    <option value="2">Couple Tour</option>
                     <option value="4">Family Tour</option>
                 </select>
-
-                <a href="#"><button type="submit"> <i class="fa fa-search"></i> Find Now </button></a>
-                
+                <a href="#"><button type="submit"><i class="fa fa-search"></i> Find Now</button></a>
             </div>
-
         </div>
     </section>
 
-    <section class="PopularTour">
+    <section class="PopularTour" id="packages">
         <div class="popularTourDiv pagewidth">
             <div class="popularTourdetails">
                 <h1>Our Popular Tours</h1>
                 <div class="popularTourpara">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ruas nulla expedita natus, corporis, mollitia, neque nostrum? Unde fugit, 
-                        vitae.
+                    <p>Wherever you're headed, we've got an itinerary that fits. Our most-loved tours are built around a few core ideas:</p>
                     <ul>
-                        <li><a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo veritatis cumque at beatae. </a></li>
-                        <li><a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo veritatis cumque at beatae. </a></li>
-                        <li><a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo veritatis cumque at beatae. </a></li>
-
-
+                        <li><a href="#">Handpicked stays — every hotel is personally vetted by our team for comfort, safety, and location.</a></li>
+                        <li><a href="#">Local guides — meet the destination through people who actually live there, not a script.</a></li>
+                        <li><a href="#">Flexible pacing — adventure-packed days, free afternoons, or a slow café-and-museum mix. Your call.</a></li>
                     </ul>
-
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                        Assumenda asperiores ex, perspiciatis excepturi modi delectus recusandae 
-                        necessitatibus aperiam enim sit. Veritatis hic, iste  id architecto nihil cumque sapiente 
-                        aspernatur quos.
-                    </p>
+                    <p>Whether it's your first trip abroad or your fiftieth, we'll handle the logistics so you can focus on the experience. Browse our most-booked packages and find the one that calls to you.</p>
                 </div>
                 <a href="#"><button>Read More</button></a>
             </div>
             <div class="popularTourImage">
-                <img src="Asset/Images/Rectangle 4.png" alt="image">
+                <img src="Asset/Images/Rectangle 4.png" alt="Travellers enjoying a scenic mountain view">
             </div>
         </div>
     </section>
@@ -102,11 +84,8 @@
         <div class="chooseDestinationDiv pagewidth fullPanelAllDiv">
             <div class="chooseDestinationTitlePanel generalTitlePanel">
                 <h1>Choose Your Destination</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing. Quae quasi 
-                    aliquam suscipit numquam obcaecati. 
-                </p>
+                <p>Beaches, mountains, ancient cities, hidden valleys — pick the corner of the world that's calling you next.</p>
             </div>
-
             <div class="chooseDestinationBody">
                 <div class="choosedestinationImg choosedestinationImg1">
                     <h2>Maldives</h2>
@@ -115,7 +94,7 @@
                     <h2>Indonesia</h2>
                 </div>
                 <div class="choosedestinationImg choosedestinationImg3">
-                    <h2>Srilanka</h2>
+                    <h2>Sri Lanka</h2>
                 </div>
                 <div class="choosedestinationImg choosedestinationImg4">
                     <h2>North America</h2>
@@ -137,184 +116,137 @@
         <div class="whyChooseUsdiv pagewidth fullPanelAllDiv">
             <div class="whyChooseUsTitlePanel generalTitlePanel">
                 <h1>Why Choose Us</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo minima qui, 
-                    quis debitis!</p>
+                <p>Three reasons travellers come back to Hero Travel year after year.</p>
             </div>
-
             <div class="whyChooseUsBodyPanel">
                 <div class="WCUHotels WCUBodyCOntentAll">
                     <div class="WCUHotelsImg WCUImg">
-                        <img src="Asset/Images/hotels.png" alt="Hotel">
+                        <img src="Asset/Images/hotels.png" alt="Hotel icon">
                     </div>
                     <div class="WCUHotelsContent WCUContentAll">
                         <h2>Handpicked Hotels</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae neque veniam ad vero iste, 
-                            rerum, ratione hic, sequi suscipit id! Lorem ipsum dolor sit amet.
-                        </p>
+                        <p>Every hotel on our list is personally inspected for comfort, cleanliness, and location. No surprises when you check in — only the good kind.</p>
                     </div>
                 </div>
-
                 <div class="WCUService WCUBodyCOntentAll">
                     <div class="WCUServiceImg WCUImg">
-                        <img src="Asset/Images/map.png" alt="Map">
+                        <img src="Asset/Images/map.png" alt="Map icon">
                     </div>
                     <div class="WCUServiceContent WCUContentAll">
-                        <h2>World Class Service</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae dolorum non architecto recusandae neque veniam ad vero iste, 
-                            rerum, ratione hic, sequi suscipit id! Lorem ipsum dolor.
-                        </p>
+                        <h2>World-Class Service</h2>
+                        <p>From booking to baggage, our 24/7 support team is one message away. We've helped over 10,000 travellers feel at home, anywhere in the world.</p>
                     </div>
                 </div>
-
                 <div class="WCUPrice WCUBodyCOntentAll">
                     <div class="WCUPriceImg WCUImg">
-                        <img src="Asset/Images/price deal.png" alt="Map">
+                        <img src="Asset/Images/price deal.png" alt="Price tag icon">
                     </div>
                     <div class="WCUPriceContent WCUContentAll">
-                        <h2>Best price Gurantee</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae dolorum neque veniam ad vero iste, 
-                            rerum, ratione hic, sequi suscipit id! Lorem ipsum dolor sit.
-                        </p>
+                        <h2>Best Price Guarantee</h2>
+                        <p>Find the same package cheaper elsewhere within 24 hours of booking and we'll match it — and give you a $50 travel credit on top.</p>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
     <section class="dealsandDiscountsSection">
         <div class="dealsandDiscountDiv pagewidth fullPanelAllDiv">
             <div class="dealsandDiscountTitlePanel generalTitlePanel">
-                <h1>Deals & Discounnts</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                     Voluptatem perferendis beatae iusto!
-                </p>
+                <h1>Deals &amp; Discounts</h1>
+                <p>Limited-time tour packages, hand-picked by our team and priced for travellers who like a good deal.</p>
             </div>
-
             <div class="dealsandDiscountBodyPanel">
                 <div class="TourToSantoriniPanel1 dealsandDiscountBodyCommonPanel">
                     <div class="dealsandDiscountContentDiv">
                         <div class="dealsandDiscountContentTop">
                             <div class="days DDtopCmnSection">
                                 <div class="dayslogo DDcmnLogoIcon"><i class="fa fa-clock-o"></i></div>
-                                <p> 7 days / 6 Nights</p>
+                                <p>7 days / 6 Nights</p>
                             </div>
-
                             <div class="GroupMember DDtopCmnSection">
                                 <div class="groupLogo DDcmnLogoIcon"><i class="fa fa-group"></i></div>
-                                <p> Max : 10</p>
+                                <p>Max: 10</p>
                             </div>
-
                             <div class="ocation DDtopCmnSection">
                                 <div class="locationpLogo DDcmnLogoIcon"><i class="fa fa-map-marker"></i></div>
-                                <p> Greece</p>
+                                <p>Greece</p>
                             </div>
                         </div>
-                        
-                        <h2>Tour To Santorini</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eum et deserunt quis ullam,
-                           incidunt recusandae similique quae autem dicta, quisquam laboriosam, hic repellat pariatur.
-                        </p>
+                        <h2>Tour to Santorini</h2>
+                        <p>Whitewashed villages, sapphire-blue domes, and sunsets that stop you mid-sentence. A week of island life, ferries, and Greek wine.</p>
                         <div class="DDprice">
-                            <h3> Price : $1300 - $1500</h3>
+                            <h3>Price: $1300 - $1500</h3>
                         </div>
                         <a href="#"><button>Book Now</button></a>
-                        
                     </div>
                 </div>
-
                 <div class="TourToSantoriniPanel2 dealsandDiscountBodyCommonPanel">
                     <div class="dealsandDiscountContentDiv">
                         <div class="dealsandDiscountContentTop">
                             <div class="days DDtopCmnSection">
                                 <div class="dayslogo DDcmnLogoIcon"><i class="fa fa-clock-o"></i></div>
-                                <p> 7 days / 6 Nights</p>
+                                <p>5 days / 4 Nights</p>
                             </div>
-
                             <div class="GroupMember DDtopCmnSection">
                                 <div class="groupLogo DDcmnLogoIcon"><i class="fa fa-group"></i></div>
-                                <p> Max : 10</p>
+                                <p>Max: 8</p>
                             </div>
-
                             <div class="ocation DDtopCmnSection">
                                 <div class="locationpLogo DDcmnLogoIcon"><i class="fa fa-map-marker"></i></div>
-                                <p> Greece</p>
+                                <p>Indonesia</p>
                             </div>
                         </div>
-                        
-                        <h2>Tour To Santorini</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eum et deserunt quis ullam,
-                           incidunt recusandae similique quae autem dicta, quisquam laboriosam, hic repellat pariatur.
-                        </p>
+                        <h2>Bali Adventure</h2>
+                        <p>Rice terraces at sunrise, surfing in Canggu, temple hops in Ubud. Five days that pack in everything Bali does best.</p>
                         <div class="DDprice">
-                            <h3> Price : $1300 - $1500</h3>
+                            <h3>Price: $900 - $1100</h3>
                         </div>
                         <a href="#"><button>Book Now</button></a>
-                        
                     </div>
                 </div>
-
-
                 <div class="TourToSantoriniPanel3 dealsandDiscountBodyCommonPanel">
                     <div class="dealsandDiscountContentDiv">
                         <div class="dealsandDiscountContentTop">
                             <div class="days DDtopCmnSection">
                                 <div class="dayslogo DDcmnLogoIcon"><i class="fa fa-clock-o"></i></div>
-                                <p> 7 days / 6 Nights</p>
+                                <p>4 days / 3 Nights</p>
                             </div>
-
                             <div class="GroupMember DDtopCmnSection">
                                 <div class="groupLogo DDcmnLogoIcon"><i class="fa fa-group"></i></div>
-                                <p> Max : 10</p>
+                                <p>Max: 6</p>
                             </div>
-
                             <div class="ocation DDtopCmnSection">
                                 <div class="locationpLogo DDcmnLogoIcon"><i class="fa fa-map-marker"></i></div>
-                                <p> Greece</p>
+                                <p>Maldives</p>
                             </div>
                         </div>
-                        
-                        <h2>Tour To Santorini</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eum et deserunt quis ullam,
-                           incidunt recusandae similique quae autem dicta, quisquam laboriosam, hic repellat pariatur.
-                        </p>
+                        <h2>Maldives Retreat</h2>
+                        <p>Overwater villas, snorkelling with reef sharks, and sunsets you'll talk about for years. Pure quiet and pure blue.</p>
                         <div class="DDprice">
-                            <h3> Price : $1300 - $1500</h3>
+                            <h3>Price: $1500 - $1800</h3>
                         </div>
                         <a href="#"><button>Book Now</button></a>
-                        
                     </div>
                 </div>
-
                 <a href="#"><button>See All Packages</button></a>
             </div>
-
         </div>
     </section>
 
     <section class="SimplePlace">
         <div class="simplePlaceDiv pagewidth">
             <div class="simplePlaceContentPanel">
-                <h1>A simple perfect Place To get Lost</h1>
-                <P>Lorem ipsum dolor sit amet adipisicing elit. Consectetur 
-                    praesentium quod alias perferendis? Rerum nulla  commodi aut iste.
-                </P>
+                <h1>A Simple, Perfect Place To Get Lost</h1>
+                <p>Sometimes the best trips are the slow ones — a quiet village, a long hike, a meal you didn't plan. Here's why our travellers keep coming back to the off-the-grid routes.</p>
                 <ul>
-                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                        Deserunt delectus sed accusamus impedit illo eius.
-                    </li>
-                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                        Deserunt delectus sed accusamus impedit illo eius.
-                    </li>
+                    <li>Tucked-away stays in places your map app barely knows.</li>
+                    <li>Local guides who turn a hike into a story you'll keep telling.</li>
                 </ul>
                 <a href="#"><button>See More</button></a>
             </div>
-
             <div class="simplePlaceVideoDiv">
-                
-                    <iframe width="100%" height="100%"src="https://www.youtube.com/embed/ePjDdvZQmag">
-                    </iframe>
-                
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ePjDdvZQmag" title="Hero Travel destinations video" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
     </section>
@@ -323,11 +255,11 @@
         <div class="newsletterDiv pagewidth">
             <div class="newsletterFromDIV">
                 <h2>Newsletter</h2>
-                <p>Get your daily dose of travel news and tips. Sign Up today!</p>
+                <p>Get your weekly dose of travel tips, hidden gems, and member-only deals. Sign up today.</p>
                 <hr>
                 <form action="#" method="#">
-                    <input type="text" placeholder="Enter your name" id="enterName" >
-                    <input type="email" placeholder="Enter Your email" id="enterEmail">
+                    <input type="text" placeholder="Enter your name" id="enterName">
+                    <input type="email" placeholder="Enter your email" id="enterEmail">
                     <a href="#"><button>Subscribe</button></a>
                 </form>
             </div>
@@ -340,29 +272,24 @@
         </div>
     </section>
 
-    <footer class="footerSection">
+    <footer class="footerSection" id="contact">
         <div class="footerDiv">
             <div class="footerLogoPanel">
                 <div class="footerLogoImg">
-                    <img src="Asset/Images/Group 40071 (2).png" alt="logoIcon">
+                    <img src="Asset/Images/Group 40071 (2).png" alt="Hero Travel logo">
                 </div>
                 <h1>Hero <span>Travel</span></h1>
             </div>
-            <P class="footertext">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Recusandae repellendus quisquam in eos animi dicta optio, voluptatem, quas 
-                aliquam delectus culpa voluptas!
-            </P>
+            <p class="footertext">Built for travellers who care about the details. Hero Travel curates trips that feel personal, hand-picks every stay, and stays with you from booking to homecoming.</p>
             <div class="footerSocialMediaIcons">
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-instagram"></a>
-                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" aria-label="Twitter" class="fa fa-twitter"></a>
+                <a href="#" aria-label="Facebook" class="fa fa-facebook"></a>
+                <a href="#" aria-label="Instagram" class="fa fa-instagram"></a>
+                <a href="#" aria-label="LinkedIn" class="fa fa-linkedin"></a>
             </div>
             <hr>
-            <p class="copyRight">2024, All Rights Reserved</p>
+            <p class="copyRight">© 2024 Hero Travel. All rights reserved.</p>
         </div>
     </footer>
-
 </body>
-
 </html>
