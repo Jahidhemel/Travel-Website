@@ -1,0 +1,346 @@
+/* =========================================================
+   Hero Travel — Theme Refresh
+   Loaded LAST in the cascade.
+   • Modern font (Plus Jakarta Sans)
+   • Tropical teal + sunset accent palette
+   • Sticky translucent header with backdrop blur
+   • Lift-on-hover for cards, smoother buttons, refined footer
+   ========================================================= */
+
+/* ---------- Color tokens ---------- */
+:root {
+    --btncolor: #0d9488;       /* deep teal — primary brand */
+    --txtcolor: #475569;       /* slate body text */
+    --ink:      #0f172a;       /* navy headlines */
+    --accent:   #f97316;       /* warm sunset accent */
+    --cream:    #fef7ed;       /* warm cream */
+    --line:     rgba(15, 23, 42, 0.08);
+}
+
+
+/* ---------- Typography ---------- */
+*, *::before, *::after {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+body {
+    color: var(--ink);
+    line-height: 1.55;
+    background: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+    color: var(--ink);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+}
+
+p, li {
+    color: var(--txtcolor);
+}
+
+.headerlogoPanel > h1 > span,
+.footerLogoPanel > h1 > span {
+    color: var(--btncolor) !important;
+}
+
+
+/* ---------- Sticky translucent header ---------- */
+body > header {
+    position: sticky !important;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 1px 0 rgba(15, 23, 42, 0.04);
+    transition: box-shadow 0.25s ease;
+    padding: 10px 24px;
+    margin: 0 !important;
+}
+
+body > header > .headerPaneldiv {
+    margin: 0 auto !important;
+    max-width: 1350px;
+    width: 100%;
+}
+
+.headerPaneldiv > .headerlogoPanel > h1 {
+    color: var(--ink);
+}
+
+.headernavPanel > ul > li > a {
+    color: var(--ink) !important;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.headernavPanel > ul > li > a:hover {
+    color: var(--btncolor) !important;
+}
+
+
+/* ---------- Buttons (smoother, rounded, on-brand) ---------- */
+button,
+.tourSearchPanel > a > button,
+.popularTourdetails > a > button,
+.dealsandDiscountContentDiv > a > button,
+.dealsandDiscountBodyPanel > a > button,
+.simplePlaceContentPanel > a > button,
+.newsletterFromDIV > form > a > button {
+    background: var(--btncolor) !important;
+    border-radius: 999px !important;
+    color: #fff !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.01em;
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.25s ease !important;
+    box-shadow: 0 6px 16px -8px rgba(13, 148, 136, 0.4);
+}
+
+button:hover,
+.tourSearchPanel > a > button:hover,
+.popularTourdetails > a > button:hover,
+.dealsandDiscountContentDiv > a > button:hover,
+.dealsandDiscountBodyPanel > a > button:hover,
+.simplePlaceContentPanel > a > button:hover,
+.newsletterFromDIV > form > a > button:hover {
+    transform: translateY(-2px);
+    background: #0f766e !important;       /* deeper teal */
+    box-shadow: 0 14px 28px -10px rgba(13, 148, 136, 0.55);
+}
+
+
+/* ---------- Hero banner overlay (better readability) ---------- */
+.bannerPanelDiv {
+    background-image:
+        linear-gradient( 135deg, rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.25) ),
+        url(../Images/Group\ 13\ \(1\)\ \(1\).png) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    border-radius: 28px !important;
+}
+
+.bannerPanelDiv > h1 {
+    color: #fff !important;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.bannerPanelDiv > p {
+    color: rgba(255, 255, 255, 0.92) !important;
+}
+
+/* Search panel chip-style */
+.tourSearchPanel {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(8px);
+    border-radius: 999px !important;
+    padding: 8px !important;
+    box-shadow: 0 18px 36px -16px rgba(15, 23, 42, 0.45);
+}
+
+@media (max-width: 600px) {
+    .tourSearchPanel {
+        border-radius: 18px !important;
+    }
+}
+
+.tourSearchPanel input,
+.tourSearchPanel select {
+    border-radius: 999px !important;
+    background: transparent !important;
+    color: var(--ink);
+}
+
+
+/* ---------- Section title accents ---------- */
+.generalTitlePanel > h1,
+.popularTourdetails > h1,
+.simplePlaceContentPanel > h1 {
+    color: var(--ink);
+}
+
+.generalTitlePanel > p {
+    color: var(--txtcolor);
+}
+
+
+/* ---------- Popular Tours image polish ---------- */
+.popularTourImage > img {
+    border-radius: 24px;
+    box-shadow: 0 24px 48px -20px rgba(15, 23, 42, 0.25);
+}
+
+/* ---------- Destination cards ---------- */
+.choosedestinationImg {
+    border-radius: 18px !important;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.choosedestinationImg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(15,23,42,0) 40%, rgba(15,23,42,0.5) 100%);
+    border-radius: 18px;
+    pointer-events: none;
+}
+
+.choosedestinationImg > h2 {
+    position: relative;
+    z-index: 2;
+    color: #fff !important;
+    font-weight: 700;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.choosedestinationImg:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 36px -14px rgba(15, 23, 42, 0.25);
+}
+
+
+/* ---------- Why Choose Us cards ---------- */
+.WCUBodyCOntentAll {
+    border-radius: 20px !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+
+.WCUBodyCOntentAll:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px -12px rgba(15, 23, 42, 0.12);
+}
+
+
+/* ---------- Deals & Discounts cards ---------- */
+.dealsandDiscountBodyCommonPanel {
+    border-radius: 24px !important;
+    overflow: hidden;
+}
+
+.dealsandDiscountContentDiv {
+    border-radius: 18px !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(6px);
+}
+
+.dealsandDiscountContentDiv > h2 {
+    color: var(--ink);
+}
+
+.DDcmnLogoIcon > .fa,
+.DDprice > h3 {
+    color: var(--btncolor) !important;
+}
+
+
+/* ---------- Newsletter ---------- */
+.newsletterFromDIV {
+    border: 2px solid var(--btncolor) !important;
+    border-radius: 24px !important;
+}
+
+.newsletterFromDIV > form > input {
+    border-radius: 999px !important;
+    background: #f8fafc !important;
+    border: 1px solid var(--line) !important;
+    transition: border-color 0.2s ease;
+}
+
+.newsletterFromDIV > form > input:focus {
+    border-color: var(--btncolor) !important;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.15);
+}
+
+.newsletterImgDiv {
+    border-radius: 24px !important;
+}
+
+.newsletterImgDiv > .newsletterImgContent {
+    background: var(--accent) !important;
+    border-radius: 18px !important;
+}
+
+
+/* ---------- Footer (dark + modern) ---------- */
+.footerSection {
+    background: var(--ink) !important;
+}
+
+.footerDiv {
+    background: var(--ink) !important;
+    color: #cbd5e1 !important;
+    padding: 60px 24px !important;
+    border-radius: 0 !important;
+    height: auto !important;
+    gap: 18px;
+}
+
+.footerDiv > .footerLogoPanel > h1 {
+    color: #fff !important;
+}
+
+.footerDiv > .footertext,
+.footerDiv > .copyRight {
+    color: #cbd5e1 !important;
+}
+
+.footerDiv > hr {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.footerSocialMediaIcons {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.footerSocialMediaIcons > a {
+    width: 42px;
+    height: 42px;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.08);
+    color: #cbd5e1 !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.05rem !important;
+    margin: 0 !important;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.footerSocialMediaIcons > a:hover {
+    background: var(--btncolor);
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+
+
+/* ---------- Modal + toast theme refresh ---------- */
+.ht-modal__cta {
+    background: var(--btncolor) !important;
+    border-radius: 999px !important;
+}
+
+.ht-modal__cta:hover {
+    background: #0f766e !important;
+}
+
+.ht-toast {
+    background: var(--ink) !important;
+}
+
+
+/* ---------- Smooth scroll ---------- */
+html {
+    scroll-behavior: smooth;
+}
