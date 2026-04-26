@@ -1,15 +1,16 @@
 /* =========================================================
-   Hero Travel — Theme Refresh
-   Loaded LAST in the cascade.
-   • Modern font (Plus Jakarta Sans)
-   • Tropical teal + sunset accent palette
-   • Sticky translucent header with backdrop blur
-   • Lift-on-hover for cards, smoother buttons, refined footer
+   Hero Travel — Theme Refresh v2
+   Loaded LAST in the cascade. Fixes:
+   • Sticky header now actually sticks (overflow-x: clip)
+   • Font Awesome icons render correctly (FA font kept on .fa)
+   • Mobile hamburger + center-aligned slide-down nav
+   • Scroll-aware shadow on header
    ========================================================= */
 
 /* ---------- Color tokens ---------- */
 :root {
     --btncolor: #0d9488;       /* deep teal — primary brand */
+    --btncolor-deep: #0f766e;
     --txtcolor: #475569;       /* slate body text */
     --ink:      #0f172a;       /* navy headlines */
     --accent:   #f97316;       /* warm sunset accent */
@@ -18,9 +19,32 @@
 }
 
 
-/* ---------- Typography ---------- */
-*, *::before, *::after {
+/* ---------- FIX #1: Sticky-friendly overflow ----------
+   responsive.css sets `overflow-x: hidden` on html/body which
+   silently breaks `position: sticky`. `clip` keeps horizontal
+   overflow contained without creating a scroll context.    */
+html, body {
+    overflow-x: clip !important;
+    overflow-y: visible !important;
+    max-width: 100% !important;
+}
+
+
+/* ---------- Typography ----------
+   Apply Plus Jakarta Sans broadly, but EXCLUDE Font Awesome
+   icons so .fa::before keeps its 'FontAwesome' font.        */
+*:not(.fa):not([class*="fa-"]),
+*:not(.fa):not([class*="fa-"])::before,
+*:not(.fa):not([class*="fa-"])::after {
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+.fa,
+.fa::before,
+[class^="fa-"]::before,
+[class*=" fa-"]::before {
+    font-family: 'FontAwesome' !important;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -48,11 +72,13 @@ p, li {
 }
 
 
-/* ---------- Sticky translucent header ---------- */
+/* ---------- FIX #2: Sticky translucent header ---------- */
 body > header {
     position: sticky !important;
     top: 0;
-    z-index: 100;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
@@ -63,10 +89,19 @@ body > header {
     margin: 0 !important;
 }
 
+body > header.is-scrolled {
+    box-shadow: 0 8px 24px -12px rgba(15, 23, 42, 0.18);
+}
+
 body > header > .headerPaneldiv {
     margin: 0 auto !important;
     max-width: 1350px;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 16px;
 }
 
 .headerPaneldiv > .headerlogoPanel > h1 {
@@ -81,6 +116,80 @@ body > header > .headerPaneldiv {
 
 .headernavPanel > ul > li > a:hover {
     color: var(--btncolor) !important;
+}
+
+
+/* ---------- FIX #3: Mobile hamburger + centered nav ---------- */
+.mobile-menu-btn {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--ink);
+    font-size: 1.1rem;
+    padding: 0;
+}
+
+.mobile-menu-btn:hover {
+    background: rgba(13, 148, 136, 0.08);
+    border-color: var(--btncolor);
+}
+
+.mobile-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 14px 28px -16px rgba(15, 23, 42, 0.25);
+    padding: 16px 24px 24px;
+    text-align: center;
+}
+
+.mobile-nav.is-open {
+    display: block;
+}
+
+.mobile-nav a {
+    display: block;
+    padding: 12px 0;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid var(--line);
+    transition: color 0.2s ease;
+}
+
+.mobile-nav a:last-child {
+    border-bottom: none;
+}
+
+.mobile-nav a:hover {
+    color: var(--btncolor);
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: inline-flex !important;
+    }
+
+    body > header > .headerPaneldiv > .headernavPanel {
+        display: none !important;
+    }
+
+    body > header {
+        position: sticky !important;
+        padding: 10px 16px;
+    }
 }
 
 
@@ -109,12 +218,12 @@ button:hover,
 .simplePlaceContentPanel > a > button:hover,
 .newsletterFromDIV > form > a > button:hover {
     transform: translateY(-2px);
-    background: #0f766e !important;       /* deeper teal */
+    background: var(--btncolor-deep) !important;
     box-shadow: 0 14px 28px -10px rgba(13, 148, 136, 0.55);
 }
 
 
-/* ---------- Hero banner overlay (better readability) ---------- */
+/* ---------- Hero banner overlay ---------- */
 .bannerPanelDiv {
     background-image:
         linear-gradient( 135deg, rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.25) ),
@@ -134,7 +243,6 @@ button:hover,
     color: rgba(255, 255, 255, 0.92) !important;
 }
 
-/* Search panel chip-style */
 .tourSearchPanel {
     background: rgba(255, 255, 255, 0.95) !important;
     backdrop-filter: blur(8px);
@@ -174,6 +282,7 @@ button:hover,
     border-radius: 24px;
     box-shadow: 0 24px 48px -20px rgba(15, 23, 42, 0.25);
 }
+
 
 /* ---------- Destination cards ---------- */
 .choosedestinationImg {
@@ -271,7 +380,7 @@ button:hover,
 }
 
 
-/* ---------- Footer (dark + modern) ---------- */
+/* ---------- Footer ---------- */
 .footerSection {
     background: var(--ink) !important;
 }
@@ -325,14 +434,14 @@ button:hover,
 }
 
 
-/* ---------- Modal + toast theme refresh ---------- */
+/* ---------- Modal + toast ---------- */
 .ht-modal__cta {
     background: var(--btncolor) !important;
     border-radius: 999px !important;
 }
 
 .ht-modal__cta:hover {
-    background: #0f766e !important;
+    background: var(--btncolor-deep) !important;
 }
 
 .ht-toast {
